@@ -46,7 +46,7 @@ class LEDbright {
       for ( loopC = 0; loopC < maxFade; loopC++) {
         analogWrite (colourPin, brightness);    // changed to use enum
         brightness = brightness + fadeAmount;
- //   Serial.print("brightness ");
+        //   Serial.print("brightness ");
         if (brightness <= 0 || brightness > maxFade) {
           fadeAmount = -fadeAmount ;
         }
