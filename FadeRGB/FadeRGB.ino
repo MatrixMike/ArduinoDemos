@@ -28,9 +28,10 @@ enum colours { redLED = 9, blueLED, greenLED };
 int maxFade = 250;
 
 class LEDbright {
+    // need to modify this to allow 3 pins to be faded a.o.t. just the one: colourPin
   private:   int loopC;
   public:
-    int colourPin; // RGB LED has three internal LEDs each on it's own pin
+    int colourPin1; // RGB LED has three internal LEDs each on it's own pin
     int brightness;
     int fadeAmount;
     int delayCount;
@@ -38,13 +39,15 @@ class LEDbright {
     // LEDbright() {
     // }
     LEDbright(int x, int y, int z, int dc) {
-      colourPin  = x;
+      colourPin1  = x;
       brightness = y;
       fadeAmount = z;
       delayCount = dc;
 
       for ( loopC = 0; loopC < maxFade; loopC++) {
-        analogWrite (colourPin, brightness);    // changed to use enum
+        analogWrite (colourPin1, brightness);    // changed to use enum
+        // could add two more colourPins here with same brightness 
+        // and add two more arguments 
         brightness = brightness + fadeAmount;
         //   Serial.print("brightness ");
         if (brightness <= 0 || brightness > maxFade) {
@@ -86,6 +89,10 @@ void loop()  {
 
   Serial.begin(9600);
   // LEDbright red();
+  //      colourPin  = x;
+  //      brightness = y;
+  //      fadeAmount = z;
+  //      delayCount = dc;
   LEDbright   red(redLED,   0, 2, 30);
   LEDbright green(greenLED, 0, 2, 30);
   LEDbright  blue(blueLED,  0, 2, 30);
