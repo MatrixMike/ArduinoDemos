@@ -10,13 +10,12 @@
   Very poor - inefficient code - need to rewrite to perform ALL single, dual and triple combinations.
 
   uploaded to git 29 April 2015
-
+// revived 18 Dec 2021
 */
 
 #define led  9           // RED the pin that the LED is attached to
 int brightness = 0;    // how bright the LED is
 int fadeAmount = 5;    // how many points to fade the LED by
-
 
 enum colours { redLED = 9, blueLED, greenLED };
 
