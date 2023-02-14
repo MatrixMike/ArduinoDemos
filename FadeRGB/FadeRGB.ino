@@ -10,7 +10,7 @@
   Very poor - inefficient code - need to rewrite to perform ALL single, dual and triple combinations.
 
   uploaded to git 29 April 2015
-// revived 18 Dec 2021
+  // revived 18 Dec 2021
 */
 
 #define led  9           // RED the pin that the LED is attached to
@@ -45,8 +45,8 @@ class LEDbright {
 
       for ( loopC = 0; loopC < maxFade; loopC++) {
         analogWrite (colourPin1, brightness);    // changed to use enum
-        // could add two more colourPins here with same brightness 
-        // and add two more arguments 
+        // could add two more colourPins here with same brightness
+        // and add two more arguments
         brightness = brightness + fadeAmount;
         //   Serial.print("brightness ");
         if (brightness <= 0 || brightness > maxFade) {
@@ -95,7 +95,7 @@ void loop()  {
   LEDbright   red(redLED,   0, 2, 30);
   LEDbright green(greenLED, 0, 2, 30);
   LEDbright  blue(blueLED,  0, 2, 30);
-   LEDbright green2(greenLED, 0, 2, 30);
+  LEDbright green2(greenLED, 0, 2, 30);
   //  ledRGB();
   //
   //  yellow2();
