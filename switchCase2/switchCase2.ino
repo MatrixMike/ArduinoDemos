@@ -24,7 +24,7 @@ void setup() {
   // initialize serial communication:
   Serial.begin(9600);
   // initialize the LED pins:
-  for (int thisPin = 8; thisPin < 8+5; thisPin++) {
+  for (int thisPin = 8; thisPin < 8 + 5; thisPin++) {
     pinMode(thisPin, OUTPUT);
   }
 }
@@ -57,7 +57,7 @@ void loop() {
         break;
       default:
         // turn all the LEDs off:
-  for (int thisPin = 8; thisPin < 8+5; thisPin++) {
+        for (int thisPin = 8; thisPin < 8 + 5; thisPin++) {
           digitalWrite(thisPin, LOW);
         }
     }
