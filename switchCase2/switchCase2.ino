@@ -43,7 +43,7 @@ void loop() {
       // could add delay for X mS with a character such that a string could be processed
       // could add BlueTooth and drive from a smart phone etc 
       case 'w':
-        delay(2000);b
+        delay(2000);
        
       case 'a':
         digitalWrite(8, HIGH);  // use enum is possible
