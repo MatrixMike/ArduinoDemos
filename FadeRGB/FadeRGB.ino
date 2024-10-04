@@ -127,8 +127,8 @@ void blue() {
   int maxFade = 255; // a constant ?
   int brightness = 0;
   int fadeAmount = 5;
-  int loopcount;
-  for ( loopcount = 0; loopcount < maxFade; loopcount++) {
+//  int loopcount;
+  for ( int loopcount = 0; loopcount < maxFade; loopcount++) {
     analogWrite (ledB, brightness);
     brightness = brightness + fadeAmount;
     if (brightness <= 0 || brightness > maxFade) {
